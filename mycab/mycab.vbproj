@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A625F0E1-F368-45E2-B35A-CC04E03D374C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>mycab.login</StartupObject>
+    <RootNamespace>mycab</RootNamespace>
+    <AssemblyName>mycab</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>mycab.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>mycab.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>mycab.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>mycab.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bookinginfo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookinginfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bookinginforpt.Designer.vb">
+      <DependentUpon>bookinginforpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bookinginforpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookingreceipt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookingreceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bookingreceiptrpt.Designer.vb">
+      <DependentUpon>bookingreceiptrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bookingreceiptrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking_info.Designer.vb">
+      <DependentUpon>booking_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="booking_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking_receipt.Designer.vb">
+      <DependentUpon>booking_receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="booking_receipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet10.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_BookingDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cab_BookingDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="carinfo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carinfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="carinforpt.Designer.vb">
+      <DependentUpon>carinforpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="carinforpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cartype.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cartype.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cartyperpt.Designer.vb">
+      <DependentUpon>cartyperpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cartyperpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="car_info.Designer.vb">
+      <DependentUpon>car_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="car_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="car_type_info.Designer.vb">
+      <DependentUpon>car_type_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="car_type_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerinfo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>customerinfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customerrpt.Designer.vb">
+      <DependentUpon>customerrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customerrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_info.Designer.vb">
+      <DependentUpon>customer_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customer_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="driver.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>driver.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="driverrpt.Designer.vb">
+      <DependentUpon>driverrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="driverrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="driver_info.Designer.vb">
+      <DependentUpon>driver_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="driver_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enquiryfrm.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>enquiryfrm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="enquiry_info.Designer.vb">
+      <DependentUpon>enquiry_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="enquiry_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedback.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>feedback.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="feedbackrep.Designer.vb">
+      <DependentUpon>feedbackrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="feedbackrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedback_info.Designer.vb">
+      <DependentUpon>feedback_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="feedback_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmenquiry.Designer.vb">
+      <DependentUpon>frmenquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmenquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading.Designer.vb">
+      <DependentUpon>loading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bookinginfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>bookinginfo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookinginforpt.resx">
+      <DependentUpon>bookinginforpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookingreceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>bookingreceipt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookingreceiptrpt.resx">
+      <DependentUpon>bookingreceiptrpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking_info.resx">
+      <DependentUpon>booking_info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking_receipt.resx">
+      <DependentUpon>booking_receipt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="carinfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>carinfo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="carinforpt.resx">
+      <DependentUpon>carinforpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cartype.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cartype.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cartyperpt.resx">
+      <DependentUpon>cartyperpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="car_info.resx">
+      <DependentUpon>car_info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="car_type_info.resx">
+      <DependentUpon>car_type_info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerinfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>customerinfo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerrpt.resx">
+      <DependentUpon>customerrpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_info.resx">
+      <DependentUpon>customer_info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="driver.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>driver.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="driverrpt.resx">
+      <DependentUpon>driverrpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="driver_info.resx">
+      <DependentUpon>driver_info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enquiryfrm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>enquiryfrm.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enquiry_info.resx">
+      <DependentUpon>enquiry_info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedback.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>feedback.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedbackrep.resx">
+      <DependentUpon>feedbackrep.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedback_info.resx">
+      <DependentUpon>feedback_info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmenquiry.resx">
+      <DependentUpon>frmenquiry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading.resx">
+      <DependentUpon>loading.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Cab_BookingDataSet.xsc">
+      <DependentUpon>Cab_BookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet.xss">
+      <DependentUpon>Cab_BookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cab_BookingDataSet1.xsc">
+      <DependentUpon>Cab_BookingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet1.xss">
+      <DependentUpon>Cab_BookingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet2.xsc">
+      <DependentUpon>Cab_BookingDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet2.xss">
+      <DependentUpon>Cab_BookingDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\green-car-icon-isolated-white-background-taxi-service-rent-concept-flat-vector-illustration-green-car-icon-isolated-white-111933465.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cab_BookingDataSet3.xsc">
+      <DependentUpon>Cab_BookingDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet3.xss">
+      <DependentUpon>Cab_BookingDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\thDS2F0KHQ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cab_BookingDataSet10.xsc">
+      <DependentUpon>Cab_BookingDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet10.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet10.xss">
+      <DependentUpon>Cab_BookingDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet4.xsc">
+      <DependentUpon>Cab_BookingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet4.xss">
+      <DependentUpon>Cab_BookingDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet5.xsc">
+      <DependentUpon>Cab_BookingDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet5.xss">
+      <DependentUpon>Cab_BookingDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet6.xsc">
+      <DependentUpon>Cab_BookingDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet6.xss">
+      <DependentUpon>Cab_BookingDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet7.xsc">
+      <DependentUpon>Cab_BookingDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet7.xss">
+      <DependentUpon>Cab_BookingDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet8.xsc">
+      <DependentUpon>Cab_BookingDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet8.xss">
+      <DependentUpon>Cab_BookingDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet9.xsc">
+      <DependentUpon>Cab_BookingDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet9.xss">
+      <DependentUpon>Cab_BookingDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\th %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %2811%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cab_BookingDataSet11.xsc">
+      <DependentUpon>Cab_BookingDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet11.xss">
+      <DependentUpon>Cab_BookingDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet12.xsc">
+      <DependentUpon>Cab_BookingDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Cab_BookingDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cab_BookingDataSet12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cab_BookingDataSet12.xss">
+      <DependentUpon>Cab_BookingDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\th %281%292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

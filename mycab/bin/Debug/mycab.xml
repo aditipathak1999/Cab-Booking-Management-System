@@ -1,0 +1,191 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+mycab
+</name>
+</assembly>
+<members>
+<member name="T:mycab.Cab_BookingDataSet.tblBillDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblBookingDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCarTypeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCustomerDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblDriverDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblEnquiryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblFeedbackDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblLoginDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblBillRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblBookingRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCarTypeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCustomerRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblDriverRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblEnquiryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblFeedbackRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblLoginRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblBillRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblBookingRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCarTypeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblCustomerRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblDriverRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblEnquiryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblFeedbackRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet.tblLoginRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblBillTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblBookingTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblCarTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblCarTypeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblCustomerTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblDriverTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblEnquiryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblFeedbackTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.tblLoginTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(mycab.Cab_BookingDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(mycab.Cab_BookingDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(mycab.Cab_BookingDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager.UpdateAll(mycab.Cab_BookingDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:mycab.Cab_BookingDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,11 @@
+D:\mycab\mycab\mycab\bin\Debug\mycab.exe.config
+D:\mycab\mycab\mycab\bin\Debug\mycab.exe
+D:\mycab\mycab\mycab\bin\Debug\mycab.pdb
+D:\mycab\mycab\mycab\bin\Debug\mycab.xml
+D:\mycab\mycab\mycab\obj\Debug\ResolveAssemblyReference.cache
+D:\mycab\mycab\mycab\obj\Debug\mycab.login.resources
+D:\mycab\mycab\mycab\obj\Debug\mycab.Resources.resources
+D:\mycab\mycab\mycab\obj\Debug\mycab.vbproj.GenerateResource.Cache
+D:\mycab\mycab\mycab\obj\Debug\mycab.exe
+D:\mycab\mycab\mycab\obj\Debug\mycab.xml
+D:\mycab\mycab\mycab\obj\Debug\mycab.pdb
